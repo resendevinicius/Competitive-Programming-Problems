@@ -14,9 +14,8 @@ int f(int i, bool peguei){
   if(i == n) return 0;
   if(dp[i][peguei] != -1) return dp[i][peguei];
   int ans = f(i + 1, 1);
-  if(i){
-    ans = max(ans, f(i + 1, 0) + v[i] - v[i - 1] - peguei * c);
-  }
+  if(i) ans = max(ans, f(i + 1, 0) + v[i] - v[i - 1] - peguei * c);
+ 
   return dp[i][peguei] = ans;
 }
 int main(){
