@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 
 int main(){
   ios_base::sync_with_stdio(0); cin.tie(0);
@@ -18,10 +16,7 @@ int main(){
       int j = min_element(v.begin() + i, v.end()) - v.begin() + 1;
       reverse(v.begin() + i, v.begin() + j);
       ans += (j - i);
-    }
-    
+    }    
     cout << "Case #" << ++caso << ": " << ans << '\n';
   }
-
-
 }
